@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>flip a coin</title>
+    <style>
+       *{
+         padding: 0;
+         margin: 0;
+       }
+       .container{
+        containe:60%;
+         height: 60vh;
+         margin: 40px auto;
+         border: 1px solid black;
+         display: grid;
+         grid-template-columns: 1fr 1fr 1fr;
+         grid-template-rows: repeat(3, 1fr);
+         grid-gap: 8px 4px;
+       }
+       .user{
+         
+         background-repeat: no-repeat;
+         background-size: cover;
+       }
+       .game-choice{
+        
+         background-repeat: no-repeat;
+         background-size: cover;
+        
+       }
+       .opponent {
+         background-repeat: no-repeat;
+         background-size: cover;
+         
+       }
+       .select{
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         background: purple;
+         grid-column: 1/4;
+       }
+       .select button{
+         width: 40%;
+         height: 30px;
+       }
+       /*style bord*/
+       .bord, .borA, .borB{
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         border: 2px solid grey;
+       }
+    </style>
+  </head>
+  <body>
+    <header>
+      <center>Flip a coin</center>
+    </header>
+    
+    <section class="container">
+      <!-- user div -->
+      <div class="user"></div>
+      
+      <!-- betting ground -->
+      <div class="game-choice"></div>
+      
+      <!-- computer div -->
+      <div class="opponent"></div>
+      
+      <!-- check bord-->
+      <div class='bord'>
+        score:<p class="score-player"></p>
+      </div>
+      <!-- win or lost-->
+      <div class="borA"><p class="decider"></p></div>
+      
+      <div class="borB">
+        score<p class="score-comp"></p>
+      </div>
+      
+      <!-- select option-->
+      <div class="select">
+        <button class="head">head</button>
+        <button class= "tail">tail</button>
+      </div>
+      
+    </section>
+    
+    
+    <script src="functional.js"></script>
+  </body>
+</html>
